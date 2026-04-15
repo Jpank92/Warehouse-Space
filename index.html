@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ark Logistics — 160,000 Sq Ft | AIB-Certified | Waukegan, IL</title>
+<meta name="description" content="160,000 sq ft of AIB-certified, ambient food-grade warehouse space available in Waukegan, IL. Flexible terms, full-service 3PL.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0c0c0e;
+  --ink-soft: #1a1a1f;
+  --gold: #b8932a;
+  --gold-bright: #d4a93c;
+  --gold-pale: #e8d5a0;
+  --gold-ghost: rgba(184,147,42,0.08);
+  --gold-rule: rgba(184,147,42,0.3);
+  --cream: #f5f0e8;
+  --cream-deep: #ede6d6;
+  --warm-white: #faf8f4;
+  --text-mid: #4a4540;
+  --text-light: #8a8278;
+  --border: rgba(184,147,42,0.18);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--ink);
+  color: var(--cream);
+  overflow-x: hidden;
+}
+
+/* ─── NOISE OVERLAY ─── */
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+  opacity:0.4;
+}
+
+/* ─── HEADER / NAV ─── */
+header {
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:100;
+  padding: 1.25rem 3rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background: linear-gradient(to bottom, rgba(12,12,14,0.95), transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+}
+.logo span {
+  color: var(--gold);
+}
+
+nav {
+  display:flex;
+  gap: 2.5rem;
+  align-items:center;
+}
+nav a {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+nav a:hover { color: var(--gold-pale); }
+.nav-cta {
+  border: 1px solid var(--gold-rule) !important;
+  padding: 0.5rem 1.25rem;
+  color: var(--gold-pale) !important;
+  border-radius: 2px;
+  transition: background 0.3s, color 0.3s !important;
+}
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--ink) !important;
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* geometric bg */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(135deg, #0c0c0e 0%, #12100d 40%, #1a160c 70%, #0c0c0e 100%);
+}
+.hero-bg::after {
+  content:'';
+  position:absolute;
+  top: -20%;
+  right: -10%;
+  width: 65%;
+  height: 120%;
+  background: radial-gradient(ellipse at 70% 30%, rgba(184,147,42,0.12) 0%, rgba(184,147,42,0.04) 40%, transparent 70%);
+}
+
+/* grid lines */
+.hero-grid {
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background-image:
+    linear-gradient(rgba(184,147,42,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,147,42,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+/* large watermark */
+.hero-watermark {
+  position:absolute;
+  bottom: -5%;
+  right: -3%;
+  z-index:1;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: clamp(10rem, 22vw, 22rem);
+  letter-spacing: -0.02em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(184,147,42,0.07);
+  line-height:1;
+  pointer-events:none;
+  user-select:none;
+}
+
+.hero-content {
+  position:relative;
+  z-index:2;
+  max-width: 900px;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 1s ease both;
+}
+.hero-eyebrow::before {
+  content:'';
+  display:block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero-eyebrow span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+  animation: fadeUp 1s 0.15s ease both;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-pale);
+}
+.hero h1 strong {
+  font-weight: 600;
+  display:block;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  max-width: 520px;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  animation: fadeUp 1s 0.3s ease both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  animation: fadeUp 1s 0.45s ease both;
+}
+
+.btn-primary {
+  display:inline-flex;
+  align-items:center;
+  gap: 0.6rem;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 1rem 2.25rem;
+  text-decoration:none;
+  border-radius: 2px;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--gold-bright); transform: translateY(-2px); }
+.btn-primary svg { width:14px; height:14px; }
+
+.btn-ghost {
+  display:inline-flex;
+  align-items:center;
+  gap:0.6rem;
+  color: var(--gold-pale);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration:none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.btn-ghost:hover { color: var(--gold); }
+.btn-ghost::after {
+  content:'→';
+  transition: transform 0.3s;
+}
+.btn-ghost:hover::after { transform: translateX(4px); }
+
+/* hero bottom bar */
+.hero-bar {
+  width: 100%;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  animation: fadeUp 1s 0.6s ease both;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+.hero-stat {
+  padding: 1.5rem 2rem;
+  border-right: 1px solid var(--border);
+  text-align:center;
+}
+.hero-stat:last-child { border-right:none; }
+.hero-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--gold-pale);
+  line-height:1;
+  display:block;
+}
+.hero-stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 0.35rem;
+  font-weight: 500;
+}
+
+/* ─── SECTION BASE ─── */
+section {
+  position:relative;
+  z-index: 1;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 3rem;
+}
+
+.eyebrow {
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  margin-bottom: 1.25rem;
+}
+.eyebrow::before {
+  content:'';
+  display:block;
+  width:24px;
+  height:1px;
+  background: var(--gold);
+}
+.eyebrow span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform:uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.section-title em { font-style:italic; color: var(--gold-pale); }
+
+/* ─── DIVIDER ─── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-rule) 20%, var(--gold-rule) 80%, transparent);
+  position:relative;
+  z-index:1;
+}
+
+/* ─── COMPLIANCE SECTION (dark) ─── */
+.compliance {
+  background: var(--ink-soft);
+}
+.compliance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+.compliance-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.cert-badges {
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  margin-top: 2rem;
+}
+.cert-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:0.6rem;
+  border: 1px solid var(--gold-rule);
+  padding: 0.6rem 1.2rem;
+  border-radius: 2px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform:uppercase;
+  color: var(--gold-pale);
+  font-weight: 600;
+}
+.cert-badge .dot {
+  width:6px; height:6px;
+  background: var(--gold);
+  border-radius:50%;
+}
+.compliance-numbers {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.compliance-num-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  padding: 2rem 1.75rem;
+  position:relative;
+  overflow:hidden;
+  transition: background 0.3s, border-color 0.3s;
+}
+.compliance-num-card:hover {
+  background: var(--gold-ghost);
+  border-color: var(--gold-rule);
+}
+.compliance-num-card::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  opacity:0;
+  transition: opacity 0.3s;
+}
+.compliance-num-card:hover::before { opacity:1; }
+.cnum {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--gold-pale);
+  line-height:1;
+  display:block;
+  margin-bottom: 0.5rem;
+}
+.clabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform:uppercase;
+  color: var(--text-light);
+  font-weight:500;
+  line-height:1.4;
+}
+
+/* ─── FEATURES (cream bg) ─── */
+.features {
+  background: var(--cream);
+  color: var(--ink);
+}
+.features .eyebrow::before { background: var(--gold); }
+.features .section-title { color: var(--ink); }
+.features .section-title em { color: var(--gold); }
+
+.features-intro {
+  max-width: 500px;
+  margin-bottom: 4rem;
+}
+.features-intro p {
+  color: var(--text-mid);
+  font-size: 1rem;
+  line-height:1.7;
+  font-weight:300;
+  margin-top:1rem;
+}
+
+.features-list {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:2px;
+  background: rgba(12,12,14,0.08);
+}
+.feat-item {
+  background: var(--cream);
+  padding: 2.5rem 2rem;
+  transition: background 0.3s;
+  position:relative;
+}
+.feat-item:hover { background: var(--cream-deep); }
+.feat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight:600;
+  letter-spacing:0.1em;
+  margin-bottom:1.25rem;
+}
+.feat-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height:1.2;
+  margin-bottom: 0.75rem;
+}
+.feat-item p {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height:1.7;
+  font-weight:300;
+}
+
+/* ─── SERVICES ─── */
+.services {
+  background: var(--ink);
+}
+.services-layout {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5rem;
+  margin-top: 4rem;
+}
+.services-header p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height:1.7;
+  font-weight:300;
+  margin-top:1.5rem;
+}
+.services-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  align-content: start;
+}
+.svc-item {
+  background: var(--ink);
+  padding: 1.25rem 1.5rem;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing:0.02em;
+  transition: background 0.25s;
+}
+.svc-item:hover { background: var(--ink-soft); }
+.svc-icon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--gold-rule);
+  border-radius: 2px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size: 0.75rem;
+  color: var(--gold);
+}
+
+/* ─── INDUSTRIES ─── */
+.industries {
+  background: var(--ink-soft);
+}
+.industries-scroll {
+  display:flex;
+  flex-wrap:wrap;
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
+.ind-tag {
+  border: 1px solid var(--border);
+  padding: 0.65rem 1.5rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform:uppercase;
+  color: var(--text-light);
+  font-weight: 500;
+  border-radius: 1px;
+  cursor: default;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+.ind-tag:hover {
+  border-color: var(--gold);
+  color: var(--gold-pale);
+  background: var(--gold-ghost);
+}
+
+/* ─── LOCATION ─── */
+.location {
+  background: var(--cream);
+  color: var(--ink);
+}
+.location .section-title { color: var(--ink); }
+.location .section-title em { color: var(--gold); }
+.location .eyebrow::before { background: var(--gold); }
+
+.location-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items:center;
+  margin-top:4rem;
+}
+.location-info {
+  display:flex;
+  flex-direction:column;
+  gap: 1.5rem;
+}
+.loc-item {
+  display:flex;
+  gap:1.25rem;
+  align-items:flex-start;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(12,12,14,0.1);
+}
+.loc-item:last-child { border-bottom:none; }
+.loc-icon {
+  width:36px; height:36px;
+  background: var(--gold-ghost);
+  border: 1px solid rgba(184,147,42,0.2);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+  font-size:0.9rem;
+  border-radius:2px;
+}
+.loc-item h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform:uppercase;
+  color: var(--gold);
+  font-weight:600;
+  margin-bottom:0.3rem;
+}
+.loc-item p {
+  font-size:0.95rem;
+  color: var(--text-mid);
+  line-height:1.5;
+  font-weight:300;
+}
+
+.location-map {
+  background: var(--ink);
+  aspect-ratio: 1;
+  border-radius:2px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  border: 1px solid var(--border);
+  position:relative;
+  overflow:hidden;
+}
+.location-map::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(184,147,42,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,147,42,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.map-dot {
+  width:14px; height:14px;
+  background: var(--gold);
+  border-radius:50%;
+  box-shadow: 0 0 0 6px rgba(184,147,42,0.2), 0 0 30px rgba(184,147,42,0.4);
+  position:relative;
+  z-index:1;
+  animation: pulse 2.5s ease infinite;
+}
+.map-label {
+  position:relative;
+  z-index:1;
+  margin-top:1.25rem;
+  text-align:center;
+}
+.map-label strong {
+  display:block;
+  font-family:'Barlow Condensed', sans-serif;
+  font-weight:700;
+  font-size:0.85rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--gold-pale);
+}
+.map-label span {
+  font-size:0.75rem;
+  color: var(--text-light);
+  letter-spacing:0.05em;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 6px rgba(184,147,42,0.2), 0 0 30px rgba(184,147,42,0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(184,147,42,0.08), 0 0 50px rgba(184,147,42,0.6); }
+}
+
+/* ─── CTA ─── */
+.cta-section {
+  background: linear-gradient(135deg, #12100d 0%, #1a1508 50%, #12100d 100%);
+  position:relative;
+  overflow:hidden;
+}
+.cta-section::before {
+  content:'';
+  position:absolute;
+  top:-50%; left:-20%;
+  width:80%;
+  height:200%;
+  background: radial-gradient(ellipse, rgba(184,147,42,0.1) 0%, transparent 60%);
+  pointer-events:none;
+}
+.cta-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 7rem 3rem;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items:center;
+  position:relative;
+  z-index:1;
+}
+.cta-left .section-title {
+  color: var(--cream);
+  margin-bottom:1.5rem;
+}
+.cta-left p {
+  color: var(--text-light);
+  font-size:1rem;
+  line-height:1.7;
+  font-weight:300;
+}
+.cta-right {
+  display:flex;
+  flex-direction:column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.contact-item {
+  background: rgba(12,12,14,0.7);
+  padding: 1.75rem 2rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.3rem;
+  transition: background 0.3s;
+}
+.contact-item:hover { background: var(--gold-ghost); }
+.contact-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size:0.65rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color: var(--gold);
+  font-weight:600;
+}
+.contact-value {
+  font-size:1.1rem;
+  font-weight:300;
+  color: var(--cream);
+  letter-spacing:0.02em;
+}
+.contact-value a {
+  color:inherit;
+  text-decoration:none;
+  transition: color 0.3s;
+}
+.contact-value a:hover { color: var(--gold-pale); }
+
+.cta-btn-wrap {
+  padding: 2rem;
+  background: rgba(12,12,14,0.7);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--ink);
+  border-top: 1px solid var(--border);
+  padding: 2rem 3rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.footer-logo {
+  font-family:'Barlow Condensed', sans-serif;
+  font-weight:700;
+  font-size:0.85rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color: var(--text-light);
+}
+footer p {
+  font-size:0.75rem;
+  color: var(--text-light);
+  opacity:0.6;
+}
+.footer-certs {
+  display:flex;
+  gap:1rem;
+}
+.footer-cert {
+  font-family:'Barlow Condensed', sans-serif;
+  font-size:0.65rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-rule);
+  padding: 0.3rem 0.75rem;
+  border-radius:1px;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  header { padding: 1.25rem 1.5rem; }
+  nav { display:none; }
+  .hero { padding: 0 1.5rem 8rem; }
+  .hero-bar { grid-template-columns: repeat(2,1fr); }
+  .section-inner { padding: 4rem 1.5rem; }
+  .compliance-grid,
+  .location-grid,
+  .cta-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .services-layout { grid-template-columns: 1fr; gap:2rem; }
+  .features-list { grid-template-columns: 1fr 1fr; }
+  .compliance-numbers { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .features-list { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .hero-watermark { display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo"><span>ARK</span> LOGISTICS</div>
+  <nav>
+    <a href="#compliance">Certifications</a>
+    <a href="#features">Facility</a>
+    <a href="#services">Services</a>
+    <a href="#location">Location</a>
+    <a href="#contact" class="nav-cta">Request Tour</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div style="min-height: 120px; flex-shrink:0;"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-watermark">160K</div>
+
+  <div class="hero-content" style="padding: 0 3rem 2.5rem; margin-top: auto;">
+    <div class="hero-eyebrow">
+      <span>Immediate Availability — Waukegan, Illinois</span>
+    </div>
+    <h1>
+      <em>Premium</em>
+      <strong>AIB-Certified</strong>
+      Warehouse Space
+    </h1>
+    <p class="hero-desc">
+      160,000 square feet of ambient food-grade 3PL space on the I-94 corridor. 
+      Audit-ready, FDA registered, adaptable to your operations — available now.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">
+        Request a Tour
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <a href="#features" class="btn-ghost">Explore Facility</a>
+    </div>
+  </div>
+
+  <div class="hero-bar">
+    <div class="hero-stat">
+      <span class="hero-stat-num">160,000</span>
+      <div class="hero-stat-label">Sq Ft — 216K Total Available</div>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">AIB</span>
+      <div class="hero-stat-label">International Certified</div>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">20+</span>
+      <div class="hero-stat-label">Years Food-Grade 3PL</div>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">I-94</span>
+      <div class="hero-stat-label">Corridor — 40 Mi to Chicago</div>
+    </div>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="divider"></div>
+
+<!-- COMPLIANCE -->
+<section class="compliance" id="compliance">
+  <div class="section-inner">
+    <div class="eyebrow"><span>Compliance & Certification</span></div>
+    <div class="compliance-grid">
+      <div class="compliance-text">
+        <div class="section-title">Audit-Ready.<br><em>No Prep Required.</em></div>
+        <p style="margin-top:1.5rem;">Ark Logistics maintains AIB International certification and FDA facility registration continuously — not just at audit time. Our food defense plan, vulnerability assessments, and documented SOPs are always current.</p>
+        <p>When you store here, your compliance burden is dramatically reduced. We carry the certification so you don't have to build it from scratch.</p>
+        <div class="cert-badges">
+          <div class="cert-badge"><span class="dot"></span> AIB International Certified</div>
+          <div class="cert-badge"><span class="dot"></span> FDA Registered Facility</div>
+          <div class="cert-badge"><span class="dot"></span> Food Defense Plan</div>
+          <div class="cert-badge"><span class="dot"></span> Ambient Food-Grade</div>
+        </div>
+      </div>
+      <div class="compliance-numbers">
+        <div class="compliance-num-card">
+          <span class="cnum">20+</span>
+          <div class="clabel">Years Food-Grade Operations</div>
+        </div>
+        <div class="compliance-num-card">
+          <span class="cnum">AIB</span>
+          <div class="clabel">International Standard</div>
+        </div>
+        <div class="compliance-num-card">
+          <span class="cnum">FDA</span>
+          <div class="clabel">Registered Food Facility</div>
+        </div>
+        <div class="compliance-num-card">
+          <span class="cnum">24/7</span>
+          <div class="clabel">Secured Controlled Access</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="section-inner">
+    <div class="features-intro">
+      <div class="eyebrow"><span>Facility</span></div>
+      <div class="section-title">Built for<br><em>Your Operations.</em></div>
+      <p>Flexible by design. Divisible space, custom WMS integration, and an experienced team that adapts to your workflow — not the other way around.</p>
+    </div>
+    <div class="features-list">
+      <div class="feat-item">
+        <div class="feat-num">01</div>
+        <h3>Divisible Space</h3>
+        <p>Take 10,000 sq ft or the full 160,000. We configure around your volume, not a fixed floor plan.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-num">02</div>
+        <h3>Custom WMS</h3>
+        <p>Full WMS integration available on request. We adapt our systems to mirror your workflows and reporting needs.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-num">03</div>
+        <h3>Flexible Terms</h3>
+        <p>Short-term (3–6 months), annual, multi-year, or seasonal. We structure deals around your planning horizon.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-num">04</div>
+        <h3>Dock Infrastructure</h3>
+        <p>Multiple dock-high doors with drive-in pallet racking and a full sit-down forklift fleet ready for high-volume throughput.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-num">05</div>
+        <h3>Security & Access</h3>
+        <p>Controlled access, 24/7 camera surveillance, and monitored entry points meeting food-grade facility requirements.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-num">06</div>
+        <h3>Strategic Location</h3>
+        <p>I-94 corridor, 40 miles north of downtown Chicago. Immediate interstate access for inbound and outbound freight.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="services-layout">
+      <div class="services-header">
+        <div class="eyebrow"><span>Services</span></div>
+        <div class="section-title">Full-Service<br><em>3PL Operations</em></div>
+        <p>From receiving to final-mile distribution, we run the complete warehousing stack. Experienced teams, documented processes, and the flexibility to scale with your business.</p>
+      </div>
+      <div class="services-grid">
+        <div class="svc-item"><div class="svc-icon">▪</div> Pallet Storage</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Drive-In Racking</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Inventory Management</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> TL / LTL Receiving</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Container Unloading</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Pick, Pack & Ship</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Cross-Docking</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Order Fulfillment</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Kitting & Assembly</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Labeling / Relabeling</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Lot / Batch Tracking</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Cycle Counting</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Temperature Monitoring</div>
+        <div class="svc-item"><div class="svc-icon">▪</div> Outbound Distribution</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider"></div>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="section-inner">
+    <div class="eyebrow"><span>Industries Served</span></div>
+    <div class="section-title">Who We Work With</div>
+    <div class="industries-scroll">
+      <div class="ind-tag">Food & Beverage</div>
+      <div class="ind-tag">CPG / Consumer Goods</div>
+      <div class="ind-tag">Supplements & Nutraceuticals</div>
+      <div class="ind-tag">Pet Food & Treats</div>
+      <div class="ind-tag">E-Commerce Fulfillment</div>
+      <div class="ind-tag">Health & Beauty</div>
+      <div class="ind-tag">Spice & Seasoning</div>
+      <div class="ind-tag">Snack & Confectionery</div>
+      <div class="ind-tag">Coffee & Tea</div>
+      <div class="ind-tag">Organic & Natural Brands</div>
+      <div class="ind-tag">Household Products</div>
+      <div class="ind-tag">Seasonal Overflow</div>
+      <div class="ind-tag">Industrial & Manufacturing</div>
+      <div class="ind-tag">Regional Distribution</div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider"></div>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="section-inner">
+    <div class="location-grid">
+      <div>
+        <div class="eyebrow"><span>Location</span></div>
+        <div class="section-title">Positioned for<br><em>Midwest Reach</em></div>
+        <div class="location-info" style="margin-top:2.5rem;">
+          <div class="loc-item">
+            <div class="loc-icon">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p>2431 N Delany Rd, Suite 100<br>Waukegan, IL 60087</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">🛣️</div>
+            <div>
+              <h4>Highway Access</h4>
+              <p>I-94 corridor — direct interstate access, 40 miles north of downtown Chicago</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">🌎</div>
+            <div>
+              <h4>Regional Reach</h4>
+              <p>Ideal Midwest distribution hub serving Illinois, Wisconsin, Indiana, Iowa, and beyond</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">⚡</div>
+            <div>
+              <h4>Immediate Availability</h4>
+              <p>Space is ready for move-in now. Tours available on short notice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="location-map">
+        <div class="map-dot"></div>
+        <div class="map-label">
+          <strong>Waukegan, IL</strong>
+          <span>I-94 Corridor · Lake County</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider"></div>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    <div class="cta-left">
+      <div class="eyebrow"><span>Get Started</span></div>
+      <div class="section-title">Ready to Tour<br><em>the Facility?</em></div>
+      <p style="margin-top:1.5rem;">Space is available now. We can schedule a walkthrough within days, provide a custom quote based on your volume, and get you onboarded fast. Reach out directly — no forms, no queue.</p>
+    </div>
+    <div class="cta-right">
+      <div class="contact-item">
+        <div class="contact-label">Contact</div>
+        <div class="contact-value">Jake Pankow — COO, Ark Logistics</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="/cdn-cgi/l/email-protection#cea4afa5abbeafa0a5a1b98eafbca5a2a1a9a7bdbaa7adbde0aca7b4"><span class="__cf_email__" data-cfemail="096368626c79686762667e49687b6265666e607a7d606a7a276b6073">[email&#160;protected]</span></a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Phone</div>
+        <div class="contact-value"><a href="tel:+18472443456">(847) 244-3456</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Address</div>
+        <div class="contact-value">2431 N Delany Rd, Suite 100<br>Waukegan, IL 60087</div>
+      </div>
+      <div class="cta-btn-wrap">
+        <a href="/cdn-cgi/l/email-protection#d3b9b2b8b6a3b2bdb8bca493b2a1b8bfbcb4baa0a7bab0a0fdb1baa9" class="btn-primary" style="width:100%; justify-content:center;">
+          Request a Tour or Quote
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Ark Logistics</div>
+  <p>2431 N Delany Rd, Suite 100 · Wauk
