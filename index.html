@@ -1106,7 +1106,7 @@ footer p {
       </div>
       <div class="contact-item">
         <div class="contact-label">Email</div>
-        <div class="contact-value"><a id="email-link" href="#" onclick="return false;">jakepankow@arklogistics.biz</a></div>
+        <div class="contact-value"><span id="eml" style="color:var(--gold-pale);cursor:pointer;">loading...</span></div>
       </div>
       <div class="contact-item">
         <div class="contact-label">Phone</div>
@@ -1117,7 +1117,7 @@ footer p {
         <div class="contact-value">2431 N Delany Rd, Suite 100<br>Waukegan, IL 60087</div>
       </div>
       <div class="cta-btn-wrap">
-        <a id="cta-btn" href="#" class="btn-primary" style="width:100%; justify-content:center;">
+        <a id="ctabtn" href="javascript:void(0);" class="btn-primary" style="width:100%; justify-content:center;">
           Request a Tour or Quote
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
@@ -1129,4 +1129,30 @@ footer p {
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Ark Logistics</div>
-  <p>2431 N Delany Rd, Suite 100 · Wauk
+  <p>2431 N Delany Rd, Suite 100 · Wegan, IL 60087 · (847) 244-3456</p>
+  <div class="footer-certs">
+    <div class="footer-cert">AIB Certified</div>
+    <div class="footer-cert">FDA Registered</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  var u = 'jakepankow';
+  var d = 'arklogistics.biz';
+  var m = 'mailto:' + u + '@' + d;
+  var el = document.getElementById('eml');
+  if (el) {
+    el.textContent = u + '@' + d;
+    el.style.textDecoration = 'underline';
+    el.addEventListener('click', function(){ window.location.href = m; });
+  }
+  var btn = document.getElementById('ctabtn');
+  if (btn) {
+    btn.addEventListener('click', function(e){ e.preventDefault(); window.location.href = m; });
+  }
+});
+</script>
+
+</body>
+</html>
